@@ -1,0 +1,19 @@
+{
+  "name": "task-4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node eslint-plugin-import/test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^9.39.1"
+  },
+  "dependencies": {
+    "react": "^19.2.1",
+    "zod": "^4.1.13"
+  }
+}
