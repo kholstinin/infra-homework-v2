@@ -8,12 +8,12 @@
 // external imports
 import some from "a";
 import some2 from "b";
-// deep imports
-import some3 from "../../../a";
-import some4 from "../../b";
 // local imports
 import some3 from "./a";
 import some4 from "./b";
+// deep imports
+import some3 from "../../../a";
+import some4 from "../../b";
 ```
 
 Все подключения уже написаны в `eslint.config.js`, написаны тесты и реализован плагин, вам нужно лишь реализовать правило.
