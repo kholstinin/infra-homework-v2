@@ -19,17 +19,10 @@ export function check(filePath) {
     });
 
     walk(astTree, {}, {
-        IfStatement(node, {state, visit, next}) {
-            console.log('if');
-            visit(node.test, {...state, isIf: true})
-        },
-        AwaitExpression(node, {state, next}) {
-            console.log('await');
-            next({...state, isAwait: true});
-        },
-        CallExpression(node, {state}) {
-            console.log('call');
-            if (!state.isIf || state.isAwait) {
+        CallExpression(node, {path}) {
+            const haveIfStatementParent = path.find((parentNode) => parentNode.type === 'IfStatement');
+            const haveAwaitExpressionParent = path.find((parentNode) => parentNode.type === 'AwaitExpression');
+            if (!haveIfStatementParent || haveAwaitExpressionParent) {
                 return;
             }
 
