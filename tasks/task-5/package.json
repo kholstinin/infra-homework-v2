@@ -1,0 +1,16 @@
+{
+  "name": "task-5",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node cdp.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chrome-remote-interface": "^0.33.3",
+    "express": "^5.2.1"
+  }
+}

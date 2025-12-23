@@ -1,0 +1,12 @@
+{
+  "name": "task-6",
+  "version": "1.0.0",
+  "description": "Ваша задача с помощью Chrome DevTools Protocol прочитать содержимое элемента.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
