@@ -43,9 +43,23 @@ async function test() {
     await DOM.enable();
 
     // Здесь нужно получить содержимое элемента #root
-    const result = '???';
+    {
+      const evaluateResponse = await Runtime.evaluate({
+          expression: 'document.getElementById("root").textContent',
+      });
+      const result = evaluateResponse.result.value;
 
-    assert.equal(result, expected);
+      assert.equal(result, expected);
+    }
+
+    {
+      const { root: doc } = await DOM.getDocument();
+      const root = await DOM.querySelector({ nodeId: doc.nodeId, selector: '#root' });
+      const getOuterHTMLResponse = await DOM.getOuterHTML({ nodeId: root.nodeId });
+      const result = getOuterHTMLResponse.outerHTML.match(/>(.*)</)[1];
+
+      assert.equal(result, expected);
+    }
   } catch (err) {
     console.error(err);
   } finally {
