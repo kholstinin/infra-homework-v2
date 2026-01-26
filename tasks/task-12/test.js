@@ -1,6 +1,6 @@
 import assert from "node:assert";
 
-const res = await fetch('http://localhost:4000');
+const res = await fetch('http://localhost:3000');
 const result = await res.json();
 
 assert.equal(res.status, 200);
