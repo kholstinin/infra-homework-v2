@@ -1,0 +1,15 @@
+{
+  "name": "task-14",
+  "version": "1.0.0",
+  "description": "Необходимо добавить контейнеру из 10 лекции nginx в качестве reverse proxy.",
+  "main": "server.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
