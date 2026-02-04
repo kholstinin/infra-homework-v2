@@ -1,0 +1,22 @@
+{
+  "name": "task-15",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:development": "ENV=development docker compose up -d --build && ENV=development npx playwright test ./test/test.spec.js; docker compose down",
+    "test:staging": "ENV=staging docker compose up -d --build && ENV=staging npx playwright test ./test/test.spec.js; docker compose down",
+    "test:production": "ENV=production docker compose up -d --build && ENV=production npx playwright test ./test/test.spec.js; docker compose down"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.1",
+    "@types/node": "^25.2.0"
+  }
+}
