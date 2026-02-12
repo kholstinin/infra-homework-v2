@@ -14,3 +14,7 @@ bucket: `infra-2`
 папка внутри бакета: ваше имя пользователя на gitlab, переменная `$GITLAB_USER_LOGIN`
 
 Для авторизации используйте переменные `$AWS_ACCESS_KEY_ID` и `$AWS_SECRET_ACCESS_KEY` (доступны на весь gitlab).
+
+Для проверки можете сделать запрос в бакет за index.html файлом:
+
+https://storage.yandexcloud.net/infra-2/YOUR_USERNAME/index.html
