@@ -1,12 +1,14 @@
 import path from "node:path";
+import TerserPlugin from "terser-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 
 const config = {
   entry: "./src/index.tsx",
   mode: "production",
+  devtool: false,
   output: {
-    publicPath: '',
+    publicPath: "",
     path: path.resolve(import.meta.dirname, "dist"),
     filename: "[name]_[contenthash:8].js",
   },
@@ -19,6 +21,18 @@ const config = {
       template: "./index.html",
     }),
   ],
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          format: {
+            comments: false,
+          },
+        },
+        extractComments: false,
+      }),
+    ],
+  },
   module: {
     rules: [
       {
@@ -43,8 +57,8 @@ const config = {
       },
       {
         test: /\.png$/,
-        type: 'asset/resource'
-      }
+        type: "asset/resource",
+      },
     ],
   },
   experiments: {

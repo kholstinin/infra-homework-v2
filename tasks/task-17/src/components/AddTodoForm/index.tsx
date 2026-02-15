@@ -5,8 +5,6 @@ import { v4 as uuid } from "uuid";
 // @ts-ignore
 import logo from "./logo.png";
 
-import _ from "lodash";
-
 import "./styles.css";
 import { ITodoItem } from "store/models/todo.model";
 
@@ -48,7 +46,7 @@ export const AddTodoForm = ({ onFormSubmit }: IAddTodoFormProps) => {
         <Col xs={24} sm={24} md={7} lg={5} xl={4}>
           <Button type="primary" htmlType="submit" block>
             <PlusCircleFilled />
-            {_.upperFirst("add todo")}
+            Add todo
           </Button>
         </Col>
       </Row>

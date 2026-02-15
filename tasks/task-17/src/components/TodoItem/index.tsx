@@ -1,5 +1,4 @@
 import { Tooltip, Tag, List, Button, Popconfirm, Switch } from 'antd';
-import { CloseOutlined, CheckOutlined } from '@ant-design/icons';
 import { ITodoItem } from 'store/models/todo.model';
 
 interface ITodoItemProps {

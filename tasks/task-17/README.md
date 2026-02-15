@@ -9,9 +9,12 @@
 Основная информация необходимая для загрузки:
 
 region: `ru-central1`
+
 endpoint: `https://storage.yandexcloud.net`
+
 bucket: `infra-2`
-папка внутри бакета: ваше имя пользователя на gitlab, переменная `$GITLAB_USER_LOGIN`
+
+Папка внутри бакета: ваше имя пользователя на gitlab, переменная `$GITLAB_USER_LOGIN`
 
 Для авторизации используйте переменные `$AWS_ACCESS_KEY_ID` и `$AWS_SECRET_ACCESS_KEY` (доступны на весь gitlab).
 
